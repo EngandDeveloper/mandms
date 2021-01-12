@@ -1,0 +1,18 @@
+# M&Ms Mobile App Software Requirements specification
+
+## User Requirements
+### Priority Level: P1 (Top)
+* [ ] Be able to write M&Ms for different courses.
+* [ ] Be able to write and see M&Ms for a specific dates.
+
+### Priority Level: P2 (Medium)
+* [ ] Be able to sync data with the server for across devicess usage or to backup data.
+
+### Priority Level: P3 (Low)
+* [ ] Be able to sync my calender and get reminders based on my courses on that day to write M&Ms for that course.
+
+## System Requirements
+
+### A) Functional Requirements
+
+### B) Non-Functional Requirements

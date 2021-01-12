@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {Text, TextInput, View} from 'react-native';
-import * as SQLite from 'expo-sqlite';
+import DataManager from './DataManager';
+
+// Import and initialize DataManager: which is a wrapper class around AsyncStorage
+var data = new DataManager();
 
 export default class Note extends Component{
     state = {
@@ -17,6 +20,8 @@ export default class Note extends Component{
 
         //this.state, this.props eliminaters
         const {note, course} = this.state;
+
+        //TODO: get M&M from local storage and assign it to state.note if exist based on the id of the TextInput which will be passed as prop from App.js
 
         return(
             <>
