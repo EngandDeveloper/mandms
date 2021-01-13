@@ -8,8 +8,8 @@ export default class DataManager {
 
     /** 
         @brief function to store string values in local storage in {key, value} pairs
-        @params key: String, unique key to use as a pointer for the stored string
-        @params value: String, string to be stored in local storage
+        @params key: String -> unique key to use as a pointer for the stored string
+        @params value: String -> string to be stored in local storage
     */
    async storeString(key, value) {
         try{
@@ -24,8 +24,8 @@ export default class DataManager {
     /** 
         @brief function to store object values in local storage in {key, value} pairs
         @details uses JSON.stringify to serialize the object since AsyncStorage only store string values
-        @params key: String, unique key to use as a pointer for the stored string
-        @params value: Object, object to be stored in local storage (will be serialized to string)
+        @params key: String -> unique key to use as a pointer for the stored string
+        @params value: Object -> object to be stored in local storage (will be serialized to string)
     */
     async storeObject (key, value) {
         try {
@@ -40,7 +40,7 @@ export default class DataManager {
 
     /** 
         @brief function to get stored string values from local storage via given key
-        @params key: String, unique key to use as a pointer for the stored string
+        @params key: String -> unique key to use as a pointer for the stored string
     */
     async getString(key) {
         try {
@@ -58,7 +58,7 @@ export default class DataManager {
     /** 
         @brief function to get stored object values from local storage via given key
         @details uses JSON.parse to parse serialized object since AsyncStorage only store string values
-        @params key: String, unique key to use as a pointer for the stored string
+        @params key: String -> unique key to use as a pointer for the stored string
     */
     async getObject(key) {
         try {

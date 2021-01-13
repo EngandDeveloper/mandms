@@ -11,9 +11,28 @@ export default class Note extends Component{
         course: "3MX3",
     }
 
+    /*
+        @brief get M&M from the user, assign it to state and save it to local storage
+        @params text: String -> M&M obtained from textInput
+    */
     handleInput = (text) => {
         this.setState({note:text});
         // console.log("Text is: " + text);
+        //TODO: Don't forget to store new/modified M&M to local storage
+    }
+
+    /*
+        @brief load M&M from the local storage if it is already existing with the key provided by App.js via props
+    */
+    getNote(){
+        var value = data.getString(this.props.key);
+        console.log('getNote -> key is: ' + this.props.key);
+        if (value != null){
+            this.state({note: value});
+        }else{
+            this.state({note: ''});
+            console.log('getNote -> Could not load note from local storage!');
+        }
     }
 
     render(){
@@ -22,6 +41,7 @@ export default class Note extends Component{
         const {note, course} = this.state;
 
         //TODO: get M&M from local storage and assign it to state.note if exist based on the id of the TextInput which will be passed as prop from App.js
+        this.getNote();
 
         return(
             <>

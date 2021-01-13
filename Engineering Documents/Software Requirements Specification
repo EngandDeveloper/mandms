@@ -7,9 +7,13 @@
 
 ### Priority Level: P2 (Medium)
 * [ ] Be able to sync data with the server for across devicess usage or to backup data.
+* [ ] Accessability.
 
 ### Priority Level: P3 (Low)
 * [ ] Be able to sync my calender and get reminders based on my courses on that day to write M&Ms for that course.
+* [ ] Voice input for more convenient note taking.
+* [ ] Stylus input for more convenient note taking.
+* [ ] Supporting M&Ms with visual/audio elements. (Inserting images or audio files or just voice M&Ms - without converting to text).
 
 ## System Requirements
 
