@@ -6,9 +6,18 @@ import DataManager from './DataManager';
 var data = new DataManager();
 
 export default class Note extends Component{
-    state = {
-        note: "",
-        course: "3MX3",
+    // state = {
+    //     note: "",
+    //     course: "3MX3",
+    // }
+
+    constructor(props){
+        super(props);
+        this.state = {
+            note: "",
+            course: "3MX3",
+            key: this.props.key,
+        }
     }
 
     /*
@@ -28,9 +37,9 @@ export default class Note extends Component{
         var value = data.getString(this.props.key);
         console.log('getNote -> key is: ' + this.props.key);
         if (value != null){
-            this.state({note: value});
+            this.setState({note: value});
         }else{
-            this.state({note: ''});
+            this.setState({note: ''});
             console.log('getNote -> Could not load note from local storage!');
         }
     }
@@ -41,7 +50,7 @@ export default class Note extends Component{
         const {note, course} = this.state;
 
         //TODO: get M&M from local storage and assign it to state.note if exist based on the id of the TextInput which will be passed as prop from App.js
-        this.getNote();
+        // this.getNote();
 
         return(
             <>
